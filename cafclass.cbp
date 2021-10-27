@@ -13,13 +13,14 @@
 				<Option compiler="msvc" />
 				<Compiler>
 					<Add option="/MDd" />
+					<Add option="/GF" />
 					<Add option="/Od" />
+					<Add option="/W3" />
 					<Add option="/RTCsu" />
 					<Add option="/Fd$(TARGET_OUTPUT_DIR)$(TARGET_OUTPUT_BASENAME).pdb" />
-					<Add option="/GF" />
 					<Add option="/EHsc" />
-					<Add option="/W3" />
 					<Add option="`$(CPDE_USR)\bin\wx-config.exe --prefix=$(#wx) --wxcfg=$(#wx.debug) --cxxflags`" />
+					<Add option="-std:c++17" />
 					<Add option="/D_CRT_SECURE_NO_WARNINGS" />
 					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
 					<Add option="/D_CRT_SECURE_DEPRECATE" />
@@ -40,11 +41,12 @@
 				<Option compiler="msvc" />
 				<Compiler>
 					<Add option="/MD" />
-					<Add option="/Ox" />
 					<Add option="/GF" />
-					<Add option="/EHsc" />
+					<Add option="/Ox" />
 					<Add option="/W3" />
+					<Add option="/EHsc" />
 					<Add option="`$(CPDE_USR)\bin\wx-config.exe --prefix=$(#wx) --wxcfg=$(#wx.release) --cxxflags`" />
+					<Add option="-std:c++17" />
 					<Add option="/D_CRT_SECURE_NO_WARNINGS" />
 					<Add option="/D_CRT_NONSTDC_NO_DEPRECATE" />
 					<Add option="/D_CRT_SECURE_DEPRECATE" />
